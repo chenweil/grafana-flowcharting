@@ -1,15 +1,15 @@
 <div class="section gf-form-group">
   <h5 class="section-heading">
-    Event/Animation Mappings
+    事件/动画映射
     <info-popover mode="right-normal">
-      <span ng-bind-html="$GF.popover('Select the objects to event', 'EVENTS', 'all_events_ani')">
+      <span ng-bind-html="$GF.popover('选择要事件的对象', 'EVENTS', 'all_events_ani')">
       </span>
     </info-popover>
   </h5>
   <div class="gf-form">
-    <span class="gf-form-label width-11">Identify by
+    <span class="gf-form-label width-11">根据
       <info-popover mode="right-normal">
-        <span ng-bind-html="$GF.popover('Select the type of data in field \'What\' ID (uniq) or LABEL', 'EVENTS')">
+        <span ng-bind-html="$GF.popover('在字段“What\'ID（uniq）或LABEL中选择数据类型', 'EVENTS')">
         </span>
       </info-popover>
     </span>
@@ -21,9 +21,9 @@
   </div>
   <div class="gf-form">
     <!-- ID Regular expression -->
-    <gf-form-switch class="gf-form" label="Regular exression" label-class="width-11" checked="rule.data.eventRegEx"
+    <gf-form-switch class="gf-form" label="正则表达式" label-class="width-11" checked="rule.data.eventRegEx"
       on-change="editor.onRulesChange()"
-      tooltip="Disable this option if you don't use regular expressions in field 'What' below to improve performance">
+      tooltip="如果你在下面的“谁”字段中不使用正则表达式，请禁用此选项以提高性能">
     </gf-form-switch>
   </div>
   <!-- Table -->
@@ -32,35 +32,35 @@
     <thead>
       <tr>
         <th>
-          <label class="gf-form-label width-7" style="margin-right: 2px;">Buttons</label>
+          <label class="gf-form-label width-7" style="margin-right: 2px;">按钮</label>
         </th>
         <th>
-          <label class="gf-form-label width-8" style="margin-right: 2px;">What
+          <label class="gf-form-label width-8" style="margin-right: 2px;">谁
             <info-popover mode="right-normal">
-              <span ng-bind-html="$GF.popover('Enter shape Id or click on link button', 'EVENTS')">
+              <span ng-bind-html="$GF.popover('输入形状Id或单击链接按钮', 'EVENTS')">
               </span>
             </info-popover>
           </label>
         </th>
         <th>
-          <label class="gf-form-label width-6" style="margin-right: 2px;">When
+          <label class="gf-form-label width-6" style="margin-right: 2px;">何时
             <info-popover mode="right-normal">
               <span ng-bind-html="$GF.popover('Select level state to apply event on shape.', 'EVENTS')">
               </span>
             </info-popover>
         </th>
         <th>
-          <label class="gf-form-label width-10" style="margin-right: 2px;">Action
+          <label class="gf-form-label width-10" style="margin-right: 2px;">操作
             <info-popover mode="right-normal">
-              <span ng-bind-html="$GF.popover('Select action type', 'EVENTS')">
+              <span ng-bind-html="$GF.popover('选择操作类型', 'EVENTS')">
               </span>
             </info-popover>
           </label>
         </th>
         <th>
-          <label class="gf-form-label width-8" style="margin-right: 2px;">Value
+          <label class="gf-form-label width-8" style="margin-right: 2px;">值
             <info-popover mode="right-normal">
-              <span ng-bind-html="$GF.popover('Select value for this action', 'EVENTS')">
+              <span ng-bind-html="$GF.popover('为该操作选择值', 'EVENTS')">
               </span>
             </info-popover>
           </label>
@@ -74,38 +74,38 @@
         <td>
           <div class="gf-form">
             <label class="gf-form-label" style="margin-right: 4px;">
-              <i class="fa fa-w fa-remove pointer" bs-tooltip="'Delete this mapping object'"
+              <i class="fa fa-w fa-remove pointer" bs-tooltip="'删除这个映射对象'"
                 ng-click="editor.removeEventMap(rule,$index);editor.onRulesChange()"></i>
             </label>
             <label class="gf-form-label" ng-if="!event.isHidden()" style="margin-right: 4px;">
-              <i class="fa fa-w fa-eye pointer" bs-tooltip="'Hide selected object graph in rule'"
+              <i class="fa fa-w fa-eye pointer" bs-tooltip="'在规则中隐藏选定对象图'"
                 ng-click="event.hide();editor.onRulesChange()"></i>
             </label>
             <label class="gf-form-label" ng-if="event.isHidden()" style="margin-right: 4px;">
-              <i class="fa fa-w fa-eye-slash pointer" bs-tooltip="'show selected object graph in rule'"
+              <i class="fa fa-w fa-eye-slash pointer" bs-tooltip="'在规则中显示选定对象图'"
                 ng-click="event.show();editor.onRulesChange()"></i>
             </label>
             <label class="gf-form-label" style="margin-right: 4px;" ng-hide="editor.flowchartHandler.isMapping(event)">
               <i class="fa fa-link pointer" ng-click="editor.flowchartHandler.setMap(event, rule.data.eventProp)"
-                bs-tooltip="'Link it on object graph'"></i>
+                bs-tooltip="'把它链接到对象图上'"></i>
             </label>
             <label class="gf-form-label" style="margin-right: 4px;color:orange"
               ng-show="editor.flowchartHandler.isMapping(event)">
-              <i class="fa fa-unlink pointer" bs-tooltip="'Cancel link object graph selection'"
+              <i class="fa fa-unlink pointer" bs-tooltip="'取消链接对象图选择'"
                 ng-click="editor.flowchartHandler.unsetMap()"></i>
             </label>
           </div>
         </td>
         <td>
           <div class="gf-form">
-            <input type="text" style="margin-right: 2px;" id="{{ event.getId() }}" placeholder="id or regex of shape"
+            <input type="text" style="margin-right: 2px;" id="{{ event.getId() }}" placeholder="形状的id或正则表达式"
               class="gf-form-input width-8" ng-model="event.data.pattern" ng-if="rule.data.eventProp === 'id'"
-              bs-tooltip="'Specify regex using /my.*regex/ syntax or complete id of shape (see inspect tab)'"
+              bs-tooltip="'使用/my.*regex/语法或形状的完整id指定regex（请参见“检查”选项卡）'"
               bs-typeahead="editor.getCellNamesById" ng-blur="editor.onRulesChange()" data-min-length="0"
               data-items="100" ng-model-onblur data-placement="right" />
-            <input type="text" style="margin-right: 2px;" id="{{ event.getId() }}" placeholder="id or regex of shape"
+            <input type="text" style="margin-right: 2px;" id="{{ event.getId() }}" placeholder="形状的id或正则表达式"
               class="gf-form-input width-8" ng-model="event.data.pattern" ng-if="rule.data.eventProp === 'value'"
-              bs-tooltip="'Specify regex using /my.*regex/ syntax or complete id of shape (see inspect tab)'"
+              bs-tooltip="'使用/my.*regex/语法或形状的完整id指定regex（请参见“检查”选项卡）'"
               bs-typeahead="editor.getCellNamesByValue" ng-blur="editor.onRulesChange()" data-min-length="0"
               data-items="100" ng-model-onblur data-placement="right" />
           </div>
@@ -113,7 +113,7 @@
         <td>
           <select convert-to-number class="gf-form-input width-6" ng-model="event.data.eventOn"
             ng-change="editor.onRulesChange()">
-            <option type="number" ng-value="-1">All</option>
+            <option type="number" ng-value="-1">所有</option>
             <option type="number" ng-repeat="color in rule.data.colors" ng-value="$index">{{$index}}</option>
           </select>
         </td>
@@ -125,7 +125,7 @@
         <td>
           <div class="gf-form">
             <input type="text" style="margin-right: 2px;" placeholder="{{event.getPlaceHolder()}}"
-              class="gf-form-input width-8" ng-model="event.data.value" bs-tooltip="'Specify value for this action'"
+              class="gf-form-input width-8" ng-model="event.data.value" bs-tooltip="'指定此操作的值'"
               bs-typeahead="editor.getEventValues" data-min-length="0" data-items="100"
               ng-focus="editor.onEventValue(event)" ng-blur="editor.onRulesChange()" data-min-length="0"
               data-items="100" ng-model-onblur data-placement="right" />

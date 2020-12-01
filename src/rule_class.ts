@@ -1133,7 +1133,7 @@ export class Rule {
     return _.escape(value);
   }
   $sanitize(value: any) {
-    throw new Error('Method not implemented.');
+    throw new Error('方法未实现。');
   }
 
   decimalPlaces(num) {

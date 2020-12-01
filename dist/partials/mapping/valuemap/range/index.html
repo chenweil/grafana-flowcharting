@@ -7,30 +7,30 @@
     <thead>
       <tr>
         <th>
-          <label class="gf-form-label width-7" style="margin-right: 2px;">Buttons
+          <label class="gf-form-label width-7" style="margin-right: 2px;">按钮
             <info-popover mode="right-normal">
-              <span ng-bind-html="$GF.popover('+ : Add line, X : Remove line', 'MAPPING#what')"> </span>
+              <span ng-bind-html="$GF.popover('+ : 添加行, X : 移除行', 'MAPPING#what')"> </span>
             </info-popover>
           </label>
         </th>
         <th>
-          <label class="gf-form-label width-8" style="margin-right: 2px;">From
+          <label class="gf-form-label width-8" style="margin-right: 2px;">从
             <info-popover mode="right-normal">
-              <span ng-bind-html="$GF.popover('Min of value', 'MAPPING#Map')"> </span>
+              <span ng-bind-html="$GF.popover('最小值', 'MAPPING#Map')"> </span>
             </info-popover>
           </label>
         </th>
         <th>
-          <label class="gf-form-label width-8" style="margin-right: 2px;">To
+          <label class="gf-form-label width-8" style="margin-right: 2px;">到
             <info-popover mode="right-normal">
-              <span ng-bind-html="$GF.popover('Max of value', 'MAPPING#Map')"> </span>
+              <span ng-bind-html="$GF.popover('最大值', 'MAPPING#Map')"> </span>
             </info-popover>
           </label>
         </th>
         <th>
-          <label class="gf-form-label width-8" style="margin-right: 2px;">Value
+          <label class="gf-form-label width-8" style="margin-right: 2px;">值
             <info-popover mode="right-normal">
-              <span ng-bind-html="$GF.popover('Value string to replace', 'MAPPING#Map')"> </span>
+              <span ng-bind-html="$GF.popover('要替换的值字符串', 'MAPPING#Map')"> </span>
             </info-popover>
           </label>
         </th>
@@ -41,25 +41,25 @@
         <td>
           <div class="gf-form">
             <label class="gf-form-label" style="margin-right: 4px;">
-              <i class="fa fa-w fa-remove pointer" bs-tooltip="'Delete this mapping object'"
+              <i class="fa fa-w fa-remove pointer" bs-tooltip="'删除这个映射对象'"
                 ng-click="rule.removeRangeMap($index);editor.onRulesChange()"></i>
             </label>
           </div>
         </td>
         <td>
           <input type="text" ng-model="rangeMap.data.from" class="gf-form-input max-width-8"
-            ng-blur="editor.onRulesChange()" ng-model-onblur placeholder="min" />
+            ng-blur="editor.onRulesChange()" ng-model-onblur placeholder="最小" />
         </td>
         <td>
           <input type="text" ng-model="rangeMap.data.to" class="gf-form-input max-width-8"
-            ng-blur="editor.onRulesChange()" ng-model-onblur placeholder="max" />
+            ng-blur="editor.onRulesChange()" ng-model-onblur placeholder="最大" />
         </td>
         <td>
           <div class="gf-form">
             <input type="text" ng-model="rangeMap.data.text" class="gf-form-input max-width-8"
-              bs-typeahead="editor.getVariables" bs-tooltip="'Specify string or variables to replace values'"
+              bs-typeahead="editor.getVariables" bs-tooltip="'指定替换值的字符串或变量'"
               data-min-length="0" data-items="100" data-placement="right" ng-blur="editor.onRulesChange()"
-              ng-model-onblur placeholder="replace with" />
+              ng-model-onblur placeholder="替换为" />
           </div>
         </td>
       </tr>

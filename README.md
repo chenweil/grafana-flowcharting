@@ -1,4 +1,6 @@
-# Grafana Plugin Flowcharting
+# Grafana Plugin Flowcharting - CHS
+
+*0.9.0汉化版本*
 
 ![Banner](https://github.com/algenty/flowcharting-repository/blob/master/images/banner_large.png?raw=true)
 

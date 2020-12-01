@@ -1,12 +1,12 @@
 <div class="edit-tab-content">
   <div class="section gf-form-group" style="width:100%;">
     <h5 class="section-heading">
-      Flowchart Edition
-      <info-popover mode="right-normal"><span ng-bind-html="$GF.popover('Define you flowchart', 'README')"></span> </info-popover>
+      流程图版
+      <info-popover mode="right-normal"><span ng-bind-html="$GF.popover('定义你的流程图', 'README')"></span> </info-popover>
     </h5>
     <div class="gf-form">
       <span class="gf-form-label width-12">
-        Current flowchart
+        当前的流程图
         <info-popover mode="right-normal"
           ><span ng-bind-html="$GF.popover('Current flowchart', 'DEFINITION_XML#Type','DEFINITION_XML')"></span>
         </info-popover>
@@ -21,14 +21,14 @@
       <!-- Definition -->
       <div class="section gf-form-group" style="width:100%;">
         <h5 class="section-heading">
-          Definition
-          <info-popover mode="right-normal"><span ng-bind-html="$GF.popover('Definition of graph', 'DEFINITION_XML#Type')"></span></info-popover>
+          定义
+          <info-popover mode="right-normal"><span ng-bind-html="$GF.popover('图的定义', 'DEFINITION_XML#Type')"></span></info-popover>
         </h5>
         <!-- Flowchart Definition -->
         <div class="gf-form">
           <gf-form-switch
             class="gf-form"
-            label="Download source"
+            label="下载源"
             label-class="width-12"
             checked="flowchart.data.download"
             on-change="editor.onSourceChange()"
@@ -37,9 +37,9 @@
         </div>
         <div class="gf-form" ng-if="!flowchart.data.download">
           <label class="gf-form-label width-12"
-            >Editor Url & Theme
+            >编辑器Url和主题
             <info-popover mode="right-normal"
-              ><span ng-bind-html="$GF.popover('Address and theme of editor when click on button edit draw', 'FLOWCHART#address')"></span>
+              ><span ng-bind-html="$GF.popover('地址和编辑器的主题时，点击按钮编辑绘制', 'FLOWCHART#address')"></span>
             </info-popover>
           </label>
           <input type="text" class="gf-form-input width-30" ng-model="flowchart.data.editorUrl" placeholder="https://draw.io" />
@@ -49,10 +49,10 @@
         </div>
         <div class="gf-form">
           <span class="gf-form-label width-12">
-            Source Type
+            源类型
             <info-popover mode="right-normal"
               ><span
-                ng-bind-html="$GF.popover('Source of mxgraph definition (Xml definition, Url with xml result)', 'DEFINITION_XML#Type','DEFINITION_XML')"
+                ng-bind-html="$GF.popover('mxgraph定义的来源(Xml定义，带有Xml结果的Url)', 'DEFINITION_XML#Type','DEFINITION_XML')"
               ></span>
             </info-popover>
           </span>
@@ -71,7 +71,7 @@
             <span class="gf-form-label width-12">
               URL
               <info-popover mode="right-normal">
-                This service should respond with a xml/plain response containing mxgraph syntax
+                该服务应该使用包含mxgraph语法的xml/纯响应进行响应
               </info-popover>
             </span>
             <input
@@ -88,10 +88,10 @@
         <!-- XML/CSV -->
         <div class="gf-form gf-form--v-stretch" ng-if="!flowchart.data.download">
           <span class="gf-form-label width-12">
-            Source Content
+            内容来源
             <info-popover mode="right-normal"
               ><span
-                ng-bind-html="$GF.popover('mxgraph model, edit on draw.io and select Extra menu > Edit Diagram', 'DEFINITION_XML#Type','DEFINITION_XML')"
+                ng-bind-html="$GF.popover('mxgraph模型，绘制时编辑。io和选择额外的菜单>编辑图表', 'DEFINITION_XML#Type','DEFINITION_XML')"
               ></span>
             </info-popover>
           </span>
@@ -99,7 +99,7 @@
             name="options.source.xml.input"
             class="gf-form-input width:95% ng-pristine ng-valid ng-empty ng-touched"
             rows="10"
-            placeholder="This text should respect xml/plain mxgraph syntax"
+            placeholder="这个文本应该尊重xml/纯mxgraph语法"
             style="margin-top: 0px; margin-bottom: 0px; height: 145px; width: 95%;"
             ng-change="editor.checkSource_onSourceChange(flowchart.data.xml)"
             ng-model="flowchart.data.xml"
@@ -111,7 +111,7 @@
             name="options.source.csv.input"
             class="gf-form-input width:95% ng-pristine ng-valid ng-empty ng-touched"
             rows="10"
-            placeholder="This text should respect csv draw.io syntax&#10;See https://drawio-app.com/import-from-csv-to-drawio for more information"
+            placeholder="此文本应尊重csv绘制。io语法&#10;查看 https://drawio-app.com/import-from-csv-to-drawio 的更多信息"
             style="margin-top: 0px; margin-bottom: 0px; height: 145px; width: 95%;"
             ng-change="editor.checkSource_onSourceChange(flowchart.data.xml)"
             ng-model="flowchart.data.csv"
@@ -125,9 +125,9 @@
         <div class="gf-form-inline" ng-if=" flowchart.data.type == 'xml' && !flowchart.data.download ">
           <div class="gf-form" style="margin-right: 5px;">
             <button class="btn btn-secondary btn-small" ng-click="editor.edit($index)">
-              <i class="fa fa-edit pointer"></i> Edit Draw
+              <i class="fa fa-edit pointer"></i> 编辑绘图
               <info-popover mode="right-normal"
-                ><span ng-bind-html="$GF.popover('Open Graph in draw.io', 'DEFINITION_XML#Buttons','EDIT_EXAMPLE')"></span>
+                ><span ng-bind-html="$GF.popover('在draw.io中打开图形', 'DEFINITION_XML#Buttons','EDIT_EXAMPLE')"></span>
               </info-popover>
             </button>
           </div>
@@ -136,9 +136,9 @@
               <img
                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAxklEQVQokZWQMUpDURREzzw+kiKIlaWksnIPWttaCkFXkDWI63AFVtmApXswiFjY2IpIIOEdi7xC0PfBud29M3OZiUgXMgH21JpkTdiWEfIA3KhLYAmctf3I6Lm6cYcrm8vfD6oz5DrJC3AAVKAvAG6THAEX6n6SD4D8Ci3HwLQ5fhKef56HRjpRp0m+1LskK8JlpwxR5+q7+qTe11pnvSIGALUkOWzhFil57QUrAEne1AfgUT0day8iVkuSSTPYEtajgv/gG3TbgAtdLpuZAAAAAElFTkSuQmCC"
               />
-              Prettify
+              修饰
               <info-popover mode="right-normal"
-                ><span ng-bind-html="$GF.popover('Format XML code to display or modify', 'DEFINITION_XML#Buttons')"></span>
+                ><span ng-bind-html="$GF.popover('格式化XML代码以显示或修改', 'DEFINITION_XML#Buttons')"></span>
               </info-popover>
             </button>
           </div>
@@ -147,22 +147,22 @@
               <img
                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAzElEQVQokYWSvUoDYRREzywfS9jCInYWeTILSytRH0CwshUtbHwD38xCQSGIP/dYZINBN2Zu8RV3+Dgz3Ij8K2nAnPAI0O0wd8AhcIUcALRJX3mSZB94Bc7U+yQv4ycToxdV9aE+q7fqsN5NIqkkacAesATe1ru2EewUGEYzwPWY8XN86wdJO/VO/XKlS7Wvqr6q+k3cdeimPiVZAgMA4T3kD25DZsAxcKTeJJmP7WypWhfqg3qu9iNem2wPVxmqaqHOtpk2JztP45e+AdC7pvsVKoFjAAAAAElFTkSuQmCC"
               />
-              Minify
+              压缩
             </button>
           </div>
           <div class="gf-form" style="margin-right: 5px;">
             <button class="btn btn-secondary btn-small" ng-click="flowchart.encode()">
-              <i class="fas fa-compress-arrows-alt pointer"></i> Compress/Encode
+              <i class="fas fa-compress-arrows-alt pointer"></i> 压缩/编码
               <info-popover mode="right-normal"
-                ><span ng-bind-html="$GF.popover('Zip XML definition for big XML', 'DEFINITION_XML#Buttons')"></span>
+                ><span ng-bind-html="$GF.popover('Zip XML定义的大XML', 'DEFINITION_XML#Buttons')"></span>
               </info-popover>
             </button>
           </div>
           <div class="gf-form" style="margin-right: 5px;">
             <button class="btn btn-secondary btn-small" ng-click="flowchart.decode()">
-              <i class="fas expand-arrows-alt pointer"></i> Extract/Decode
+              <i class="fas expand-arrows-alt pointer"></i> 提取/解码
               <info-popover mode="right-normal"
-                ><span ng-bind-html="$GF.popover('Extract xml from content when compressed', 'DEFINITION_XML#Buttons')"></span>
+                ><span ng-bind-html="$GF.popover('在压缩时从内容中提取xml', 'DEFINITION_XML#Buttons')"></span>
               </info-popover>
             </button>
           </div>
@@ -171,22 +171,22 @@
     </div>
     <!-- Option Section -->
     <div class="editor-row">
-      <h5 class="section-heading">Advanced</h5>
+      <h5 class="section-heading">高级</h5>
       <div class="section gf-form-group">
         <h5 class="section-heading">
-          Display
+          展示
           <info-popover mode="right-normal"
-            ><span ng-bind-html="$GF.popover('Change display graph options', 'ADVANCED_XML#Buttons','ADVANCED_XML2')"></span>
+            ><span ng-bind-html="$GF.popover('更改显示图形选项', 'ADVANCED_XML#Buttons','ADVANCED_XML2')"></span>
           </info-popover>
         </h5>
-        <gf-form-switch class="gf-form" label="Scale" label-class="width-12" checked="flowchart.data.scale" on-change="editor.onOptionChange()">
+        <gf-form-switch class="gf-form" label="比例" label-class="width-12" checked="flowchart.data.scale" on-change="editor.onOptionChange()">
         </gf-form-switch>
-        <gf-form-switch class="gf-form" label="Center" label-class="width-12" checked="flowchart.data.center" on-change="editor.onOptionChange()">
+        <gf-form-switch class="gf-form" label="中心" label-class="width-12" checked="flowchart.data.center" on-change="editor.onOptionChange()">
         </gf-form-switch>
-        <gf-form-switch class="gf-form" label="Grid" label-class="width-12" checked="flowchart.data.grid" on-change="editor.onOptionChange()">
+        <gf-form-switch class="gf-form" label="网格" label-class="width-12" checked="flowchart.data.grid" on-change="editor.onOptionChange()">
         </gf-form-switch>
         <div class="gf-form">
-          <label class="gf-form-label width-12">Bg Color</label>
+          <label class="gf-form-label width-12">背景颜色</label>
           <span>
             <spectrum-picker class="gf-form-input" ng-model="flowchart.data.bgColor" ng-change="editor.onOptionChange()"> </spectrum-picker>
           </span>
@@ -195,10 +195,10 @@
         <!--zoom-->
         <div class="gf-form" ng-if="!flowchart.data.scale">
           <span class="gf-form-label width-12">
-            Zoom
+            放大
             <info-popover mode="right-normal"
               ><span
-                ng-bind-html="$GF.popover('Zoom graph, if scale is unchecked. if < 100% : reduce graph, >100% increase graph', 'DEFINITION_XML#Buttons','ADVANCED_XML2')"
+                ng-bind-html="$GF.popover('缩放图形，如果未选中缩放。 如果 < 100% : 减少图, >100% 增加图', 'DEFINITION_XML#Buttons','ADVANCED_XML2')"
               ></span>
             </info-popover>
           </span>
@@ -215,20 +215,20 @@
       </div>
       <div class="section gf-form-group">
         <h5 class="section-heading">
-          Others options
+          其他选项
           <info-popover mode="right-normal"
-            ><span ng-bind-html="$GF.popover('Change options in graph', 'ADVANCED_XML#Buttons','ADVANCED_XML2')"></span>
+            ><span ng-bind-html="$GF.popover('更改图形中的选项', 'ADVANCED_XML#Buttons','ADVANCED_XML2')"></span>
           </info-popover>
         </h5>
         <!-- Lock -->
-        <gf-form-switch class="gf-form" label="Lock" label-class="width-12" checked="flowchart.data.lock" on-change="editor.onOptionChange()">
+        <gf-form-switch class="gf-form" label="锁" label-class="width-12" checked="flowchart.data.lock" on-change="editor.onOptionChange()">
         </gf-form-switch>
         <!-- Draw.io source -->
         <gf-form-switch
           class="gf-form"
-          label="Allow draw.io source"
+          label="允许draw.io源"
           label-class="width-12"
-          tooltip="allow downloads images from draw.io"
+          tooltip="允许从draw.io下载图像"
           checked="flowchart.data.allowDrawio"
           on-change="editor.onSourceChange()"
         >
@@ -236,9 +236,9 @@
         <!-- Enable animation -->
         <gf-form-switch
           class="gf-form"
-          label="Enable animation"
+          label="启用动画"
           label-class="width-12"
-          tooltip="Enable animation in flowcharting like fade colors, disable it if you use 'Direct link rendered image' in share panel options for a best rendered or best performance"
+          tooltip="在流程图中启用动画，如褪色颜色，禁用它，如果你使用“直接链接渲染图像”在共享面板选项，以获得最佳渲染或最佳性能"
           checked="flowchart.data.enableAnim"
           on-change="editor.onSourceChange()"
         >
@@ -246,8 +246,8 @@
         <!-- Tooltip -->
         <gf-form-switch
           class="gf-form"
-          label="Tooltip"
-          tooltip="Enable tooltip"
+          label="工具提示"
+          tooltip="启用工具提示"
           label-class="width-12"
           checked="flowchart.data.tooltip"
           on-change="editor.onOptionChange()"

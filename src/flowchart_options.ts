@@ -91,7 +91,7 @@ export class FlowchartOptionsCtrl {
                 const bool = XGraph.isValidXml(text);
                 this.errorSourceFlag = !bool;
                 if (this.errorSourceFlag) {
-                  this.errorSourceMsg = 'Response is an invalid Xml definition';
+                  this.errorSourceMsg = '响应是无效的Xml定义';
                 } else {
                   this.errorDownloadMsg = '';
                   this.onSourceChange();
@@ -111,7 +111,7 @@ export class FlowchartOptionsCtrl {
         });
     } catch (error) {
       this.errorDownloadFlag = true;
-      this.errorDownloadMsg = 'Error when call url';
+      this.errorDownloadMsg = '调用url时出错';
     }
     return true;
   }

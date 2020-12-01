@@ -527,7 +527,7 @@ export class GFState {
       try {
         this.reset_core(key, value);
       } catch (error) {
-        $GF.log.error('Error on reset for key ' + key, error);
+        $GF.log.error('重置密钥时出错 ' + key, error);
       }
       this.changedKey.set(key, false);
       this.matchedKey.set(key, false);

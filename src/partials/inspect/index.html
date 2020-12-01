@@ -1,20 +1,20 @@
 <div class="edit-tab-content">
   <div class="editor-row">
     <div class="section gf-form-group">
-      <h5 class="section-heading">Inspector</h5>
+      <h5 class="section-heading">检查</h5>
     </div>
   </div>
   <!-- STATES -->
   <div class="editor-row">
     <h5 class="section-heading">
-      Graph inspect Id
+      图形检查Id
       <info-popover mode="right-normal">
-        <span ng-bind-html="$GF.popover('List of all objects in graph with states', 'INSPECT','inspect_graph_table')">
+        <span ng-bind-html="$GF.popover('带状态的图形中所有对象的列表', 'INSPECT','inspect_graph_table')">
         </span>
       </info-popover>
     </h5>
     <gf-form-switch class="gf-form" label-class="width-14"
-      tooltip="Enable inspect mode to view/modify identity of shapes" label="Enable" checked="editor.enable">
+      tooltip="启用检查模式以查看/修改形状的标识" label="启用" checked="editor.enable">
     </gf-form-switch>
 
     <!-- STATES MAPPING -->
@@ -29,10 +29,10 @@
 
   <!-- DEBUG -->
   <div class="editor-row">
-    <h5 class="section-heading">Debug Mode</h5>
+    <h5 class="section-heading">调试模式</h5>
     <div class="section gf-form-group">
       <div class="gf-form">
-        <gf-form-switch class="gf-form" label="Trace perf (console)" label-class="width-10" checked="editor.traceEnable"
+        <gf-form-switch class="gf-form" label="跟踪性能（控制台）" label-class="width-10" checked="editor.traceEnable"
           on-change="editor.tracePerf()"></gf-form-switch>
         </gf-form-switch>
       </div>
@@ -40,7 +40,7 @@
   </div>
 
   <div class="editor-row">
-    <h5 class="section-heading">Anonymize Graph to export or to share</h5>
+    <h5 class="section-heading">匿名图形以导出或共享</h5>
     <div class="section gf-form-group">
       <div class="gf-form">
         <button class="btn btn-inverse" ng-click="editor.anonymize()">
@@ -59,7 +59,7 @@
               </g>
             </svg>
           </div>
-          &nbsp;Anonymize
+          &nbsp;匿名
         </button>
       </div>
     </div>

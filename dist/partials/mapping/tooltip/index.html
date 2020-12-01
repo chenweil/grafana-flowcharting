@@ -1,28 +1,28 @@
 <div class="section gf-form-group">
     <h5 class="section-heading">
-      Tooltips
+      工具提示
       <info-popover mode="right-normal">
         <span
-          ng-bind-html="$GF.popover('Add/change tooltip/popup with aggregated values in shapes defined in color mapping', 'TOOLTIPS')">
+          ng-bind-html="$GF.popover('添加/改变工具提示/弹出窗口，在颜色映射中定义形状的聚合值', 'TOOLTIPS')">
         </span>
       </info-popover>
     </h5>
-    <gf-form-switch class="gf-form" label-class="width-10" tooltip="Add tooltips metrics and graphs on shapes"
-      label="Display metrics" checked="rule.data.tooltip" on-change="editor.onRulesChange()">
+    <gf-form-switch class="gf-form" label-class="width-10" tooltip="在形状上添加工具提示、度量和图形"
+      label="显示指标" checked="rule.data.tooltip" on-change="editor.onRulesChange()">
     </gf-form-switch>
     <div class="gf-form" ng-if="rule.data.tooltip">
-      <label class="gf-form-label width-10">Label
+      <label class="gf-form-label width-10">标签
         <info-popover mode="right-normal"><span
-            ng-bind-html="$GF.popover('Label of metric in popup', 'TOOLTIPS')"></span>
+            ng-bind-html="$GF.popover('度量的标签在弹出', 'TOOLTIPS')"></span>
         </info-popover>
       </label>
       <input type="text" class="gf-form-input width-12" ng-model="rule.data.tooltipLabel"
-        ng-blur="editor.onRulesChange()" placeholder="auto" />
+        ng-blur="editor.onRulesChange()" placeholder="自动" />
     </div>
     <div class="gf-form" ng-if="rule.data.tooltip">
-      <label class="gf-form-label width-10">When state is
+      <label class="gf-form-label width-10">当状态是
         <info-popover mode="right-normal">
-          <span ng-bind-html="$GF.popover('Define condition to add values in tooltip', 'TOOLTIPS')"> </span>
+          <span ng-bind-html="$GF.popover('定义在工具提示中添加值的条件', 'TOOLTIPS')"> </span>
         </info-popover>
       </label>
       <div class="gf-form-select-wrapper width-12">
@@ -31,9 +31,9 @@
       </div>
     </div>
     <div class="gf-form" ng-if="rule.data.tooltip">
-      <label class="gf-form-label width-10">Direction
+      <label class="gf-form-label width-10">方向
         <info-popover mode="right-normal">
-          <span ng-bind-html="$GF.popover('Define the sens of display', 'TOOLTIPS', 'tooltip_direction_ani')">
+          <span ng-bind-html="$GF.popover('定义显示的意义', 'TOOLTIPS', 'tooltip_direction_ani')">
           </span>
         </info-popover>
       </label>
@@ -43,7 +43,7 @@
       </div>
     </div>
     <gf-form-switch label="Color with state" class="gf-form" label-class="width-10"
-      tooltip="Color values in tooltip with state/thresholds colors" checked="rule.data.tooltipColors"
+      tooltip="颜色值在工具提示与状态/阈值的颜色" checked="rule.data.tooltipColors"
       ng-if="rule.data.tooltip">
     </gf-form-switch>
   </div>

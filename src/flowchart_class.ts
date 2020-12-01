@@ -165,7 +165,7 @@ export class Flowchart {
             state.unsetState();
           });
         } else {
-          $GF.log.warn('States not defined for this rule');
+          $GF.log.warn('未为此规则定义的状态');
         }
       } else {
         $GF.log.error('updateStates => this.stateHandler undefined');
@@ -219,10 +219,10 @@ export class Flowchart {
         }
         this.stateHandler = new StateHandler(this.xgraph);
       } else {
-        $GF.log.error('Source content empty Graph not defined');
+        $GF.log.error('未定义源内容空图形');
       }
     } catch (error) {
-      $GF.log.error('Unable to initialize graph', error);
+      $GF.log.error('无法初始化图形', error);
     }
     return this;
   }
@@ -257,10 +257,10 @@ export class Flowchart {
   setStates(rules: Rule[], metrics: Metric[]): this {
     $GF.log.info(`flowchart[${this.data.name}].setStates()`);
     if (rules === undefined) {
-      $GF.log.warn("Rules shoudn't be null");
+      $GF.log.warn('规则不应为空');
     }
     if (metrics === undefined) {
-      $GF.log.warn("Metrics shoudn't be null");
+      $GF.log.warn('指标不应为空');
     }
     if (this.stateHandler) {
       this.stateHandler.setStates(rules, metrics);

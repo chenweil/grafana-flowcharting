@@ -1,15 +1,15 @@
 <div class="section gf-form-group">
   <h5 class="section-heading">
-    Label/Text Mappings
+    标签/文本映射
     <info-popover mode="right-normal">
-      <span ng-bind-html="$GF.popover('Select the text object to replace by value', 'TEXTS','fc_subway_example')">
+      <span ng-bind-html="$GF.popover('选择要替换为值的文本对象', 'TEXTS','fc_subway_example')">
       </span>
     </info-popover>
   </h5>
   <div class="gf-form">
-    <span class="gf-form-label width-11">Identify by
+    <span class="gf-form-label width-11">根据
       <info-popover mode="right-normal">
-        <span ng-bind-html="$GF.popover('Select the type of data in field \'What\' ID (uniq) or LABEL', 'TEXTS')">
+        <span ng-bind-html="$GF.popover('在字段“谁\'ID（uniq）或LABEL中选择数据类型', 'TEXTS')">
         </span>
       </info-popover>
     </span>
@@ -21,9 +21,9 @@
   </div>
   <div class="gf-form">
     <!-- ID Regular expression -->
-    <gf-form-switch class="gf-form" label="Regular exression" label-class="width-11" checked="rule.data.textRegEx"
+    <gf-form-switch class="gf-form" label="正则表达式" label-class="width-11" checked="rule.data.textRegEx"
       on-change="editor.onRulesChange()"
-      tooltip="Disable this option if you don't use regular expressions in field 'What' below to improve performance">
+      tooltip="如果不在下面的“谁”字段中使用正则表达式来提高性能，请禁用此选项">
     </gf-form-switch>
   </div>
   <!-- Table -->
@@ -31,37 +31,37 @@
     <thead>
       <tr>
         <th>
-          <label class="gf-form-label width-7" style="margin-right: 2px;">Buttons</label>
+          <label class="gf-form-label width-7" style="margin-right: 2px;">按钮</label>
         </th>
         <th>
-          <label class="gf-form-label width-8" style="margin-right: 2px;">What
+          <label class="gf-form-label width-8" style="margin-right: 2px;">谁
             <info-popover mode="right-normal">
-              <span ng-bind-html="$GF.popover('Enter shape Id or click on link button', 'TEXTS')">
+              <span ng-bind-html="$GF.popover('输入形状Id或单击链接按钮', 'TEXTS')">
               </span>
             </info-popover>
           </label>
         </th>
         <th>
-          <label class="gf-form-label width-8" style="margin-right: 2px;">When
+          <label class="gf-form-label width-8" style="margin-right: 2px;">何时
             <info-popover mode="right-normal">
-              <span ng-bind-html="$GF.popover('Select condition to dislay value or text on shape.', 'TEXTS')">
+              <span ng-bind-html="$GF.popover('选择条件将值或文本放置在形状上。', 'TEXTS')">
               </span>
             </info-popover>
           </label>
         </th>
         <th>
-          <label class="gf-form-label width-8" style="margin-right: 2px;">How
+          <label class="gf-form-label width-8" style="margin-right: 2px;">怎样
             <info-popover mode="right-normal">
-              <span ng-bind-html="$GF.popover('Whitch part of text to replace', 'TEXTS','example_text_pattern')">
+              <span ng-bind-html="$GF.popover('Whitch部分文字，以取代', 'TEXTS','example_text_pattern')">
               </span>
             </info-popover>
           </label>
         </th>
         <th>
-          <label class="gf-form-label width-8" style="margin-right: 2px;">With
+          <label class="gf-form-label width-8" style="margin-right: 2px;">和
             <info-popover mode="right-normal">
               <span
-                ng-bind-html="$GF.popover('Enter pattern/regular expression (Only for substring method)', 'TEXTS','example_text_pattern')">
+                ng-bind-html="$GF.popover('输入模式/正则表达式(仅用于子字符串方法)', 'TEXTS','example_text_pattern')">
               </span>
             </info-popover></label>
           </label>
@@ -75,38 +75,38 @@
         <td>
           <div class="gf-form">
             <label class="gf-form-label" style="margin-right: 4px;">
-              <i class="fa fa-w fa-remove pointer" bs-tooltip="'Delete this mapping object'"
+              <i class="fa fa-w fa-remove pointer" bs-tooltip="'删除这个映射对象'"
                 ng-click="editor.removeTextMap(rule,$index);editor.onRulesChange()"></i>
             </label>
             <label class="gf-form-label" ng-if="!text.isHidden()" style="margin-right: 4px;">
-              <i class="fa fa-w fa-eye pointer" bs-tooltip="'Hide selected object graph in rule'"
+              <i class="fa fa-w fa-eye pointer" bs-tooltip="'在规则中隐藏选中的对象图'"
                 ng-click="text.hide();editor.onRulesChange()"></i>
             </label>
             <label class="gf-form-label" ng-if="text.isHidden()" style="margin-right: 4px;">
-              <i class="fa fa-w fa-eye-slash pointer" bs-tooltip="'show selected object graph in rule'"
+              <i class="fa fa-w fa-eye-slash pointer" bs-tooltip="'在规则中显示所选对象的图形'"
                 ng-click="text.show();editor.onRulesChange()"></i>
             </label>
             <label class="gf-form-label" style="margin-right: 4px;" ng-hide="editor.flowchartHandler.isMapping(text)">
               <i class="fa fa-link pointer" ng-click="editor.flowchartHandler.setMap(text, rule.data.textProp)"
-                bs-tooltip="'Select object/target in graph'"></i>
+                bs-tooltip="'在图形中选择对象/目标'"></i>
             </label>
             <label class="gf-form-label" style="margin-right: 4px;color:orange"
               ng-show="editor.flowchartHandler.isMapping(text)">
-              <i class="fa fa-unlink pointer" bs-tooltip="'Cancel link object graph selection'"
+              <i class="fa fa-unlink pointer" bs-tooltip="'取消链接对象图形选择'"
                 ng-click="editor.flowchartHandler.unsetMap()"></i>
             </label>
           </div>
         </td>
         <td>
           <div class="gf-form">
-            <input type="text" style="margin-right: 2px;" id="{{ text.getId() }}" placeholder="id or regex of shape"
+            <input type="text" style="margin-right: 2px;" id="{{ text.getId() }}" placeholder="形状的id或正则表达式"
               class="gf-form-input width-8" ng-model="text.data.pattern" ng-if="rule.data.textProp === 'id'"
-              bs-tooltip="'Specify regex using /my.*regex/ syntax or complete id of shape (see inspect tab)'"
+              bs-tooltip="'使用/my指定正则表达式。*regex/语法或形状/链接的完整id(参见检查选项卡)'"
               bs-typeahead="editor.getCellNamesById" ng-blur="editor.onRulesChange()" data-min-length="0" data-items="100"
               ng-model-onblur data-placement="right" />
-            <input type="text" style="margin-right: 2px;" id="{{ text.getId() }}" placeholder="id or regex of shape"
+            <input type="text" style="margin-right: 2px;" id="{{ text.getId() }}" placeholder="形状的id或正则表达式"
               class="gf-form-input width-8" ng-model="text.data.pattern" ng-if="rule.data.textProp === 'value'"
-              bs-tooltip="'Specify regex using /my.*regex/ syntax or complete id of shape (see inspect tab)'"
+              bs-tooltip="'使用/my指定正则表达式。*regex/语法或形状/链接的完整id(参见检查选项卡)'"
               bs-typeahead="editor.getCellNamesByValue" ng-blur="editor.onRulesChange()" data-min-length="0" data-items="100"
               ng-model-onblur data-placement="right" />
           </div>
@@ -122,7 +122,7 @@
         <td>
           <input ng-if="text.data.textReplace == 'pattern' && text.data.textOn != 'n'" type="text"
             class="gf-form-input width-8" ng-model="text.data.textPattern" ng-blur="editor.onRulesChange()"
-            placeholder="text or pattern to replace by value" />
+            placeholder="要被值替换的文本或模式" />
         </td>
       </tr>
     </tbody>

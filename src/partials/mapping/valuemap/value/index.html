@@ -7,23 +7,23 @@
     <thead>
       <tr>
         <th>
-          <label class="gf-form-label width-7" style="margin-right: 2px;">Buttons
+          <label class="gf-form-label width-7" style="margin-right: 2px;">按钮
             <info-popover mode="right-normal">
-              <span ng-bind-html="$GF.popover('+ : Add line, X : Remove line', 'MAPPING#Map')"> </span>
+              <span ng-bind-html="$GF.popover('+ : 添加行, X : 移除行', 'MAPPING#Map')"> </span>
             </info-popover>
           </label>
         </th>
         <th>
-          <label class="gf-form-label width-10" style="margin-right: 2px;">Value
+          <label class="gf-form-label width-10" style="margin-right: 2px;">值
             <info-popover mode="right-normal">
-              <span ng-bind-html="$GF.popover('Value string to replace', 'MAPPING#Map')"> </span>
+              <span ng-bind-html="$GF.popover('要替换的值字符串', 'MAPPING#Map')"> </span>
             </info-popover>
           </label>
         </th>
         <th>
-          <label class="gf-form-label width-10" style="margin-right: 2px;">Text
+          <label class="gf-form-label width-10" style="margin-right: 2px;">文本
             <info-popover mode="right-normal">
-              <span ng-bind-html="$GF.popover('Replace string with this text', 'MAPPING#Map')"> </span>
+              <span ng-bind-html="$GF.popover('用此文本替换字符串', 'MAPPING#Map')"> </span>
             </info-popover>
           </label>
         </th>
@@ -34,19 +34,19 @@
         <td>
           <div class="gf-form">
             <label class="gf-form-label" style="margin-right: 4px;">
-              <i class="fa fa-w fa-remove pointer" bs-tooltip="'Delete this mapping object'"
+              <i class="fa fa-w fa-remove pointer" bs-tooltip="'删除这个映射对象'"
                 ng-click="rule.removeValueMap($index);editor.onRulesChange()"></i>
             </label>
           </div>
         </td>
         <td>
-          <input type="text" class="gf-form-input max-width-10" ng-model="map.data.value" placeholder="Value"
+          <input type="text" class="gf-form-input max-width-10" ng-model="map.data.value" placeholder="值"
             ng-blur="editor.onRulesChange()" ng-model-onblur />
         </td>
         <td>
           <div class="gf-form">
-            <input type="text" class="gf-form-input max-width-10" ng-model="map.data.text" placeholder="Text"
-              bs-typeahead="editor.getVariables" bs-tooltip="'Specify string or variables to replace values'"
+            <input type="text" class="gf-form-input max-width-10" ng-model="map.data.text" placeholder="文本"
+              bs-typeahead="editor.getVariables" bs-tooltip="'指定替换值的字符串或变量'"
               data-min-length="0" data-items="100" data-placement="right" ng-blur="editor.onRulesChange()"
               ng-model-onblur />
           </div>

@@ -8,50 +8,50 @@
             <i class="fa fa-chevron-right"
               ng-class="{'fa-chevron-right': rule.data.reduce, 'fa-chevron-down': rule.data.reduce === false}"> </i>
           </span>
-          <span class="rule-title" ng-click="rule.data.reduce=!rule.data.reduce">{{ rule.data.order }} : Rule
+          <span class="rule-title" ng-click="rule.data.reduce=!rule.data.reduce">{{ rule.data.order }} : 规则
             [{{ rule.data.alias }}]</span>
         </div>
         <div id="center" style="display: inline-block;margin: 0 auto;width:50%;">
-          <div style="display: inline-block;margin-right: 5px;"><span>Last state level : [{{rule.highestLevel}}]</span>
+          <div style="display: inline-block;margin-right: 5px;"><span>最后一个状态级别 : [{{rule.highestLevel}}]</span>
           </div>
-          <div style="display: inline-block;margin-right: 5px;"><span>Raw value : [{{rule.highestValue}}]</span>
+          <div style="display: inline-block;margin-right: 5px;"><span>原始值 : [{{rule.highestValue}}]</span>
           </div>
-          <div style="display: inline-block;margin-right: 5px;"><span>Fomatted value : [{{rule.highestFormattedValue}}]</span>
+          <div style="display: inline-block;margin-right: 5px;"><span>格式化值 : [{{rule.highestFormattedValue}}]</span>
           </div>
           <div style="display: inline-block;margin-right: 10px;">
-            <div style="display: inline-block;margin-right: 5px;"><span>color : </span></div>
+            <div style="display: inline-block;margin-right: 5px;"><span>颜色 : </span></div>
             <div bs-tooltip="rule.highestColor"
             style="display: inline-block; width: 10px;height: 10px; background-color: {{rule.highestColor}};border: 1px solid rgb(228, 228, 228);">
           </div>
-          <div style="display: inline-block;margin-right: 5px;"><span>Execute time : [{{rule.getExectedTime()}}]</span>
+          <div style="display: inline-block;margin-right: 5px;"><span>执行时间 : [{{rule.getExectedTime()}}]</span>
           </div>
           </div>
         </div>
         <div id="right" style="float:right">
           <div id="delete" style="width:20px;clear:left;display: inline-block;">
-            <span ng-if="rule.removeClick > 1" class="rule-nav" bs-tooltip="'Click twice to remove rule'"><i
+            <span ng-if="rule.removeClick > 1" class="rule-nav" bs-tooltip="'单击两次可删除规则'"><i
                 class="fa fa-w fa-remove pointer" ng-click="editor.removeRule(rule)"></i></span>
-            <span ng-if="rule.removeClick === 1" class="rule-nav" bs-tooltip="'Click to remove rule'"
+            <span ng-if="rule.removeClick === 1" class="rule-nav" bs-tooltip="'单击可删除规则'"
               style="color:brown"><i class="fa fa-w fa-remove pointer" ng-click="editor.removeRule(rule)"></i></span>
           </div>
           <div id="clone" style="width:20px;clear:left;display: inline-block;">
-            <span class="rule-nav" bs-tooltip="'Clone this rule'"><i class="fa fa-copy"
+            <span class="rule-nav" bs-tooltip="'克隆此规则'"><i class="fa fa-copy"
                 ng-click="editor.cloneRule(rule)"></i></span>
           </div>
           <div id="show/hide" style="width:20px;clear:left;display: inline-block;">
             <span class="rule-nav" ng-click="editor.toggleShow(rule,!rule.data.hidden)"
-              bs-tooltip="rule.data.hidden ? 'Show/enable this rule' : 'Hide/disable this rule' ">
+              bs-tooltip="rule.data.hidden? 'Show/enable this rule' : 'Hide/disable this rule' ">
               <i class="fa fa-chevron-right"
                 ng-class="{'fa fa-w fa-eye pointer': !rule.isHidden(), 'fa fa-w fa-eye-slash pointer': rule.isHidden()}">
               </i>
             </span>
           </div>
           <div id="up" style="width:20px;clear:left;display: inline-block;">
-            <span class="rule-nav" ng-if="!editor.isFirstRule($index)" bs-tooltip="'Move up'"><i
+            <span class="rule-nav" ng-if="!editor.isFirstRule($index)" bs-tooltip="'向上移'"><i
                 class="fa fa-arrow-up fa-lg" ng-click="editor.moveRule(rule, true)"></i></span>
           </div>
           <div id="down" style="width:20px;clear:right;display: inline-block;">
-            <span class="rule-nav" ng-if="!editor.isLastRule($index)" bs-tooltip="'Move down'"><i
+            <span class="rule-nav" ng-if="!editor.isLastRule($index)" bs-tooltip="'向下移'"><i
                 class="fa fa-arrow-down fa-lg" ng-click="editor.moveRule(rule, false)"></i></span>
           </div>
         </div>
@@ -62,25 +62,25 @@
         <!-- OPTIONS -->
         <div class="section gf-form-group">
           <h5 class="section-heading">
-            Options
+            选项
             <info-popover mode="right-normal"><span
-                ng-bind-html="$GF.popover('Options for mapping objects and metrics', 'MAPPING','fc_archi_example')"></span>
+                ng-bind-html="$GF.popover('映射对象和度量的选项', 'MAPPING','fc_archi_example')"></span>
             </info-popover>
           </h5>
           <div class="gf-form">
-            <label class="gf-form-label width-10">Rule name
+            <label class="gf-form-label width-10">规则名
               <info-popover mode="right-normal"><span
-                  ng-bind-html="$GF.popover('Name of the rule, for information', 'MAPPING#Rule name')"></span>
+                  ng-bind-html="$GF.popover('规则的名称，供参考', 'MAPPING#Rule name')"></span>
               </info-popover>
             </label>
             <input type="text" class="gf-form-input width-12" ng-model="rule.data.alias" id="{{ rule.getId() }}"
-              placeholder="Name of this rule" />
+              placeholder="此规则的名称" />
           </div>
           <!-- Data type -->
           <div class="gf-form" ng-if="editor.isMultipleType()">
-            <label class="gf-form-label width-10">Metrics Type
+            <label class="gf-form-label width-10">指标类型
               <info-popover mode="right-normal"><span
-                  ng-bind-html="$GF.popover('Only one type of queries by rule Series or table', 'MAPPING#Aggregation')"></span>
+                  ng-bind-html="$GF.popover('仅按规则系列或表列出一种查询类型', 'MAPPING#Aggregation')"></span>
               </info-popover>
             </label>
             <div class="gf-form-select-wrapper width-12">
@@ -90,41 +90,41 @@
           </div>
           <!-- Metric Name -->
           <div class="gf-form">
-            <label class="gf-form-label width-10">Apply to metrics
+            <label class="gf-form-label width-10">应用于指标
               <info-popover mode="right-normal"><span
-                  ng-bind-html="$GF.popover('Select alias or name of metric', 'MAPPING#Apply to metrics named','mp_metrics_name')"></span>
+                  ng-bind-html="$GF.popover('选择指标的别名或名称', 'MAPPING#Apply to metrics named','mp_metrics_name')"></span>
               </info-popover>
             </label>
-            <input type="text" placeholder="Name or regex of metric" class="gf-form-input width-12"
-              ng-model="rule.data.pattern" bs-tooltip="'Specify regex using /my.*regex/ syntax'"
+            <input type="text" placeholder="公制的名称或正则表达式" class="gf-form-input width-12"
+              ng-model="rule.data.pattern" bs-tooltip="'使用/my.*regex/syntax指定regex'"
               bs-typeahead="editor.getMetricNames" ng-blur="editor.onRulesChange()" ng-model-onblur data-min-length="0"
               data-items="100" data-placement="right" ng-if="rule.data.metricType === 'serie'" />
             <div class="gf-form-select-wrapper width-12" ng-if="rule.data.metricType === 'table'">
               <select class="gf-form-input" ng-model="rule.data.refId" ng-options="o for o in editor.getTablesName()"
                 ng-blur="editor.onRulesChange()">
-                <option style="display:none" value="">select a table</option>
+                <option style="display:none" value="">选择一个表</option>
               </select>
             </div>
           </div>
           <!-- Columns -->
           <div class="gf-form" ng-if="rule.data.metricType === 'table'">
-            <label class="gf-form-label width-10">Apply to column
+            <label class="gf-form-label width-10">应用于列
               <info-popover mode="right-normal"><span
-                  ng-bind-html="$GF.popover('Column name of the table', 'MAPPING#Aggregation')"></span>
+                  ng-bind-html="$GF.popover('表的列名', 'MAPPING#Aggregation')"></span>
               </info-popover>
             </label>
             <div class="gf-form-select-wrapper width-12">
               <select class="gf-form-input" ng-model="rule.data.column"
                 ng-options="o for o in editor.getColumnsForTable(rule.data.refId)" ng-blur="editor.onRulesChange()">
-                <option style="display:none" value="">select a column</option>
+                <option style="display:none" value="">选择列</option>
               </select>
             </div>
           </div>
           <!-- Aggregation -->
           <div class="gf-form">
-            <label class="gf-form-label width-10">Aggregation
+            <label class="gf-form-label width-10">聚合
               <info-popover mode="right-normal"><span
-                  ng-bind-html="$GF.popover('Select an aggregation for all values of metric', 'MAPPING#Aggregation')"></span>
+                  ng-bind-html="$GF.popover('为所有度量值选择聚合', 'MAPPING#Aggregation')"></span>
               </info-popover>
             </label>
             <div class="gf-form-select-wrapper width-12">
@@ -138,17 +138,17 @@
         <!-- TYPE -->
         <div class="section gf-form-group">
           <h5 class="section-heading">
-            Type
+            类型
             <info-popover mode="right-normal">
               <span
-                ng-bind-html="$GF.popover('Specify unit (Number, String or date) and type for displayed values by Text Mappings.', 'MAPPING#Type')">
+                ng-bind-html="$GF.popover('通过文本映射为显示的值指定单位（数字、字符串或日期）和类型。', 'MAPPING#Type')">
               </span>
             </info-popover>
           </h5>
           <div class="gf-form">
-            <label class="gf-form-label width-10">Type
+            <label class="gf-form-label width-10">类型
               <info-popover mode="right-normal"><span
-                  ng-bind-html="$GF.popover('Select type and unit of metric to display it for the good format.', 'MAPPING#Type')"></span>
+                  ng-bind-html="$GF.popover('选择“类型”和“公制单位”以显示正确格式。', 'MAPPING#Type')"></span>
               </info-popover>
             </label>
             <div class="gf-form-select-wrapper width-16">
@@ -157,9 +157,9 @@
             </div>
           </div>
           <div class="gf-form" ng-if="rule.data.type === 'date'">
-            <label class="gf-form-label width-10">Date Format
+            <label class="gf-form-label width-10">日期格式
               <info-popover mode="right-normal"><span
-                  ng-bind-html="$GF.popover('Select format of the date to display it in text with text mapping.', 'MAPPING#Type')"></span>
+                  ng-bind-html="$GF.popover('选择日期格式，以文本映射的文本形式显示。', 'MAPPING#Type')"></span>
               </info-popover>
             </label>
             <gf-form-dropdown model="rule.data.dateFormat" css-class="gf-form-input width-16" lookup-text="true"
@@ -179,9 +179,9 @@
 
           <div ng-if="rule.data.type === 'number'">
             <div class="gf-form">
-              <label class="gf-form-label width-10">Unit
+              <label class="gf-form-label width-10">单位
                 <info-popover mode="right-normal"><span
-                    ng-bind-html="$GF.popover('Select unit of aggregated value.', 'MAPPING#Type')"></span>
+                    ng-bind-html="$GF.popover('选择聚合值的单位。', 'MAPPING#Type')"></span>
                 </info-popover>
               </label>
               <div class="gf-form-dropdown-typeahead width-16" ng-model="rule.data.unit"
@@ -189,9 +189,9 @@
                 dropdown-typeahead-on-select="editor.setUnitFormat(rule, $subItem)"></div>
             </div>
             <div class="gf-form">
-              <label class="gf-form-label width-10">Decimals
+              <label class="gf-form-label width-10">小数点
                 <info-popover mode="right-normal"><span
-                    ng-bind-html="$GF.popover('Select number of decimals', 'MAPPING#Type')"></span>
+                    ng-bind-html="$GF.popover('选择小数位数', 'MAPPING#Type')"></span>
                 </info-popover>
               </label>
               <input type="number" class="gf-form-input width-4" data-placement="right" ng-model="rule.data.decimals"
@@ -233,11 +233,11 @@
         <div class="gf-form-inline">
           <div class="gf-form" style="margin-right: 5px;">
             <button class="btn btn-danger btn-small" ng-click="editor.removeRule(rule, true)"><i
-                class="fa fa-trash"></i> Remove Rule</button>
+                class="fa fa-trash"></i> 移除规则</button>
           </div>
           <div class="gf-form">
             <button class="btn btn-secondary btn-small" ng-click="editor.cloneRule(rule)"><i class="fa fa-copy"></i>
-              Copy Rule</button>
+              复制规则</button>
           </div>
         </div>
       </div>
@@ -246,8 +246,7 @@
 
   <div class="editor-row">
     <div class="gf-form-button-row">
-      <button class="btn btn-inverse" ng-click="editor.rulesHandler.addRule('/.*/')"><i class="fa fa-plus"></i>&nbsp;Add
-        Rule</button>
+      <button class="btn btn-inverse" ng-click="editor.rulesHandler.addRule('/.*/')"><i class="fa fa-plus"></i>&nbsp;添加规则</button>
     </div>
   </div>
 </div>

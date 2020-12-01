@@ -43,81 +43,81 @@ class GFCONSTANT {
 
   // CONDITIONS
   TOOLTIP_APPLYON: gf.TTooltipOnList = [
-    { text: 'Warning / Critical', value: 'wc' },
-    { text: 'Always', value: 'a' },
+    { text: '警告/关键', value: 'wc' },
+    { text: '永远', value: 'a' },
   ];
   COLOR_APPLYON: gf.TColorOnList = [
-    { text: 'Never', value: 'n' },
-    { text: 'Warning / Critical', value: 'wc' },
-    { text: 'Always', value: 'a' },
+    { text: '决不', value: 'n' },
+    { text: '警告/关键', value: 'wc' },
+    { text: '永远', value: 'a' },
   ];
   TEXT_APPLYON: gf.TTextOnList = [
-    { text: 'Never', value: 'n' },
-    { text: 'When Metric Displayed', value: 'wmd' },
-    { text: 'Warning / Critical', value: 'wc' },
-    { text: 'Critical Only', value: 'co' },
+    { text: '决不', value: 'n' },
+    { text: '当指标显示', value: 'wmd' },
+    { text: '警告/关键', value: 'wc' },
+    { text: '仅关键', value: 'co' },
   ];
   LINK_APPLYON: gf.TLinkOnList = [
-    { text: 'Warning / Critical', value: 'wc' },
-    { text: 'Always', value: 'a' },
+    { text: '警告/关键', value: 'wc' },
+    { text: '永远', value: 'a' },
   ];
 
   // TYPES
   VALUE_TYPES: gf.TValueTypeList = [
-    { text: 'Number', value: 'number' },
-    { text: 'String', value: 'string' },
-    { text: 'Date', value: 'date' },
+    { text: '数字', value: 'number' },
+    { text: '字符串', value: 'string' },
+    { text: '日期', value: 'date' },
   ];
   METRIC_TYPES: gf.TMetricTypeList = [
-    { text: 'Series', value: 'serie' },
-    { text: 'Table', value: 'table' },
+    { text: '序列', value: 'serie' },
+    { text: '表格', value: 'table' },
   ];
   SOURCE_TYPES: gf.TSourceTypeList = [
     { text: 'XML', value: 'xml' },
     { text: 'CSV', value: 'csv' },
   ];
   DIOTHEME_TYPES: gf.TDioThemeList = [
-    { text: 'Dark', value: 'dark' },
-    { text: 'Light', value: 'kennedy' },
-    { text: 'Mobile', value: 'minimal' },
-    { text: 'atlas', value: 'atlas' },
+    { text: '黑暗', value: 'dark' },
+    { text: '明亮', value: 'kennedy' },
+    { text: '手机', value: 'minimal' },
+    { text: '地图', value: 'atlas' },
   ];
   IDENT_TYPES: { text: string; value: gf.TPropertieKey }[] = [
     { text: 'Id', value: 'id' },
-    { text: 'Label', value: 'value' },
+    { text: '标签', value: 'value' },
   ];
   AGGREGATION_TYPES: gf.TAggregationList = [
-    { text: 'First', value: 'first' },
-    { text: 'First (not null)', value: 'first_notnull' },
-    { text: 'Last', value: 'current' },
-    { text: 'Last (not null)', value: 'current_notnull' },
-    { text: 'Min', value: 'min' },
-    { text: 'Max', value: 'max' },
-    { text: 'Sum', value: 'total' },
-    { text: 'Avg', value: 'avg' },
-    { text: 'Count', value: 'count' },
-    { text: 'Delta', value: 'delta' },
-    { text: 'Range', value: 'range' },
-    { text: 'Diff', value: 'diff' },
-    { text: 'Time of last point', value: 'last_time' },
+    { text: '第一个', value: 'first' },
+    { text: '第一个（非空）', value: 'first_notnull' },
+    { text: '最后', value: 'current' },
+    { text: '最后（非空）', value: 'current_notnull' },
+    { text: '最小', value: 'min' },
+    { text: '最大', value: 'max' },
+    { text: '总和', value: 'total' },
+    { text: '平均', value: 'avg' },
+    { text: '总数', value: 'count' },
+    { text: '增量', value: 'delta' },
+    { text: '范围', value: 'range' },
+    { text: '差异', value: 'diff' },
+    { text: '最后一个时间点', value: 'last_time' },
   ];
   TOOLTIP_GRAPH_TYPES: gf.TGraphTypeList = [
-    { text: 'Line', value: 'line' },
-    { text: 'Histogram', value: 'bar' },
+    { text: '线', value: 'line' },
+    { text: '直方图', value: 'bar' },
   ];
   TOOLTIP_GRAPH_SCALE_TYPES: gf.TGraphScaleList = [
-    { text: 'Linear', value: 'linear' },
-    { text: 'Logarithmic', value: 'log' },
+    { text: '线性', value: 'linear' },
+    { text: '对数', value: 'log' },
   ];
   TOOLTIP_GRAPH_SIZE_TYPES: gf.TGraphSizeList = [
-    { text: 'Adjustable', value: '100%' },
-    { text: 'Small', value: '100px' },
-    { text: 'Medium', value: '200px' },
-    { text: 'Large', value: '400px' },
+    { text: '可调', value: '100%' },
+    { text: '小', value: '100px' },
+    { text: '中等', value: '200px' },
+    { text: '大', value: '400px' },
   ];
   TOOLTIP_DIRECTION_TYPES: gf.TDirectionList = [
-    { text: 'Vertical', value: 'v' },
-    { text: 'Horizontal ', value: 'h' },
+    { text: '垂直', value: 'v' },
+    { text: '水平 ', value: 'h' },
   ];
   VALUE_DATEFORMAT_TYPES: gf.TDateFormatList = [
     { text: 'YYYY-MM-DD HH:mm:ss', value: 'YYYY-MM-DD HH:mm:ss' },
@@ -128,95 +128,95 @@ class GFCONSTANT {
   ];
 
   VALUEMAPPINGTYPES: gf.TValueMappingList = [
-    { text: 'Value to text', value: 1 },
-    { text: 'Range to text', value: 2 },
+    { text: '值到文本', value: 1 },
+    { text: '范围到文本', value: 2 },
   ];
 
   // METHODS
   TEXTMETHODS: gf.TTextMethodList = [
-    { text: 'All content', value: 'content' },
-    { text: 'Substring', value: 'pattern', placeholder: '/RegEx/' },
-    { text: 'Append (Space) ', value: 'as' },
-    { text: 'Append (New line) ', value: 'anl' },
+    { text: '所有内容', value: 'content' },
+    { text: '字符串', value: 'pattern', placeholder: '/RegEx/' },
+    { text: '追加（空格）', value: 'as' },
+    { text: '追加（新行）', value: 'anl' },
   ];
   COLORMETHODS: gf.TStyleColorList = [
-    { text: 'Shape Stroke/Border', value: 'strokeColor' },
-    { text: 'Shape Fill', value: 'fillColor' },
-    { text: 'Shape Gradient', value: 'gradientColor' },
-    { text: 'Label font color', value: 'fontColor' },
-    { text: 'Label background color', value: 'labelBackgroundColor' },
-    { text: 'Label border color', value: 'labelBorderColor' },
-    { text: 'Image background', value: 'imageBackground' },
-    { text: 'Image border', value: 'imageBorder' },
+    { text: '形状笔划/边框', value: 'strokeColor' },
+    { text: '形状填充', value: 'fillColor' },
+    { text: '形状梯度', value: 'gradientColor' },
+    { text: '标签字体颜色', value: 'fontColor' },
+    { text: '标签背景色', value: 'labelBackgroundColor' },
+    { text: '标签边框颜色', value: 'labelBorderColor' },
+    { text: '图像背景', value: 'imageBackground' },
+    { text: '图像边框', value: 'imageBorder' },
   ];
   EVENTMETHODS: gf.TStyleEventList = [
-    { text: 'Shape : Change form (text)', value: 'shape', type: 'text', placeholder: 'Shape name' },
-    { text: 'Shape : Rotate Shape (0-360)', value: 'rotation', type: 'number', placeholder: '0-360', default: 0 },
-    { text: 'Shape : Blink (frequence ms)', value: 'blink', type: 'number', placeholder: 'Number in ms', default: 500 },
-    { text: 'Shape : Hide/Show (0|1)', value: 'visibility', type: 'number', placeholder: '0 or 1', typeahead: '0|1' },
-    { text: 'Shape : Height (number)', value: 'height', type: 'number', placeholder: 'Number of px' },
-    { text: 'Shape : Width (number)', value: 'width', type: 'number', placeholder: 'Number of px' },
-    { text: 'Shape : Resize (percent)', value: 'size', type: 'number', placeholder: 'percent' },
-    { text: 'Shape : Opacity (0-100)', value: 'opacity', type: 'number', placeholder: '0-100', default: 100 },
+    { text: '形状：更改表单（文本）', value: 'shape', type: 'text', placeholder: '形状名称' },
+    { text: '形状：旋转形状（0-360）', value: 'rotation', type: 'number', placeholder: '0-360', default: 0 },
+    { text: '形状：闪烁（频率ms）', value: 'blink', type: 'number', placeholder: '数字（毫秒）', default: 500 },
+    { text: '形状：隐藏/显示（0 | 1）', value: 'visibility', type: 'number', placeholder: '0 或 1', typeahead: '0|1' },
+    { text: '形状：高度（数字）', value: 'height', type: 'number', placeholder: '数字（像素）' },
+    { text: '形状：宽度（数字）', value: 'width', type: 'number', placeholder: '数字（像素）' },
+    { text: '形状：调整大小（百分比）', value: 'size', type: 'number', placeholder: '百分比' },
+    { text: '形状：不透明度（0-100）', value: 'opacity', type: 'number', placeholder: '0-100', default: 100 },
     {
-      text: 'Shape : Gradient direction',
+      text: '形状：渐变方向',
       value: 'gradientDirection',
       type: 'text',
-      placeholder: 'Direction name',
+      placeholder: '方向名称',
       default: 'south',
       typeahead: 'south|east|north|west',
     },
     {
-      text: 'Shape : Collapse/Expande (0|1)',
+      text: '形状：折叠/展开（0 | 1）',
       value: 'fold',
       type: 'number',
       placeholder: '0 or 1',
       typeahead: '0|1',
       default: '1',
     },
-    { text: 'Shape : Change position in Bar (0-100)', value: 'barPos', type: 'number', placeholder: '0-100' },
+    { text: '形状：更改条形图中的位置（0-100）', value: 'barPos', type: 'number', placeholder: '0-100' },
     {
-      text: 'Shape : Flip horizontally (0|1)',
+      text: '形状：水平翻转（0 | 1）',
       value: 'flipH',
       type: 'number',
-      placeholder: '0 or 1',
+      placeholder: '0 或 1',
       typeahead: '0|1',
     },
-    { text: 'Shape : Flip vertically (0|1)', value: 'flipV', type: 'number', placeholder: '0 or 1', typeahead: '0|1' },
+    { text: '形状：垂直翻转（0 | 1）', value: 'flipV', type: 'number', placeholder: '0 或 1', typeahead: '0|1' },
     {
-      text: 'Arrow : change start marker (text)',
+      text: '箭头：更改起始标记（文本）',
       value: 'startArrow',
       type: 'text',
-      placeholder: 'Marker',
+      placeholder: '标记',
       typeahead:
         'none|classic|classicThin|block|blockThin|open|openThin|oval|diamond|diamondThin|openAsync|async|box|halfCircle|dash|cross|circlePlus|circle|ERone|ERmandOne|ERoneToMany|ERzeroToOne',
     },
     {
-      text: 'Arrow : change end marker (text)',
+      text: '箭头：更改结束标记（文本）',
       value: 'endArrow',
       type: 'text',
-      placeholder: 'Marker',
+      placeholder: '标记',
       typeahead:
         'none|classic|classicThin|block|blockThin|open|openThin|oval|diamond|diamondThin|openAsync|async|box|halfCircle|dash|cross|circlePlus|circle|ERone|ERmandOne|ERoneToMany|ERzeroToOne',
     },
     {
-      text: 'Arrow : Anime flow (frequence ms)',
+      text: '箭头：动画流（频率ms）',
       value: 'class_mxEdgeFlow',
       type: 'number',
-      placeholder: 'Number in ms',
+      placeholder: '数字（毫秒）',
     },
-    { text: 'Label : Replace text (text)', value: 'text', type: 'text', placeholder: 'Text' },
-    { text: 'Label : Font Size (numeric)', value: 'fontSize', type: 'number', placeholder: 'Number' },
-    { text: 'Label : Opacity (numeric)', value: 'textOpacity', type: 'number', placeholder: '0-100', default: 100 },
-    { text: 'Image : Change URL (text)', value: 'image', type: 'text', placeholder: 'Url' },
+    { text: '标签:替换文本(文本)', value: 'text', type: 'text', placeholder: '文本' },
+    { text: '标签:字体大小(数字)', value: 'fontSize', type: 'number', placeholder: '数字' },
+    { text: '标签:不透明度(数字)', value: 'textOpacity', type: 'number', placeholder: '0-100', default: 100 },
+    { text: '图片:更改URL(文本)', value: 'image', type: 'text', placeholder: 'Url' },
   ];
 
   LOCALVARIABLENAMES: gf.TVariableList = [
-    { text: 'Name of the rule', value: this.VAR_STR_RULENAME },
-    { text: 'Current color according to the thresholds', value: this.VAR_STR_COLOR },
-    { text: 'Current raw value according to the aggregation', value: this.VAR_NUM_VALUE },
-    { text: 'Current level according to the thresholds', value: this.VAR_NUM_LEVEL },
-    { text: 'Current formated value accordingto the type', value: this.VAR_STR_FORMATED },
+    { text: '规则的名称', value: this.VAR_STR_RULENAME },
+    { text: '根据阈值的当前颜色', value: this.VAR_STR_COLOR },
+    { text: '当前原始值（根据聚合）', value: this.VAR_NUM_VALUE },
+    { text: '根据阈值确定当前水平', value: this.VAR_NUM_LEVEL },
+    { text: '根据类型指定的当前格式化值', value: this.VAR_STR_FORMATED },
   ];
 }
 
@@ -853,7 +853,7 @@ export class $GF {
           window.clearTimeout(tm);
         }
       } catch (error) {
-        $GF.log.warn('Failed to clear timeout thread', id, error);
+        $GF.log.warn('无法清除超时线程', id, error);
       }
     }
   }
@@ -897,7 +897,7 @@ export class $GF {
         interval.delete(id);
         window.clearInterval(int);
       } catch (error) {
-        $GF.log.warn('Failed to clear interval thread', id, error);
+        $GF.log.warn('无法清除间隔线程', id, error);
       }
     }
   }

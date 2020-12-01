@@ -151,7 +151,7 @@ export class Serie extends Metric {
       }
       return value;
     } catch (error) {
-      $GF.log.error('datapoint for serie is null', error);
+      $GF.log.error('数据点为空', error);
       return null;
     }
   }
@@ -433,7 +433,7 @@ export class Table extends Metric {
       }
       return value;
     } catch (error) {
-      $GF.log.error('datapoint for table is null', error);
+      $GF.log.error('表的数据点为空', error);
       return null;
     }
   }

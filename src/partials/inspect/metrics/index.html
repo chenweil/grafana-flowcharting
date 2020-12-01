@@ -16,7 +16,7 @@
                                             <th ng-repeat="col in ctrl.table.columns" ng-if="!col.hidden">
                                                 <div class="table-panel-table-header-inner pointer"
                                                     ng-click="ctrl.toggleColumnSort(col, $index)">
-                                                    Time
+                                                    时间
                                                     <!----><span class="table-panel-table-header-controls"
                                                         ng-if="col.sort">
                                                         <i class="fa fa-caret-down" ng-show="col.desc"></i>
@@ -31,7 +31,7 @@
                                             <th ng-repeat="col in ctrl.table.columns" ng-if="!col.hidden">
                                                 <div class="table-panel-table-header-inner pointer"
                                                     ng-click="ctrl.toggleColumnSort(col, $index)">
-                                                    A-series
+                                                    A-序列
                                                     <!---->
                                                 </div>
                                             </th>
@@ -42,10 +42,10 @@
                                     <tbody>
                                         <tr>
                                             <td>
-                                                <div class="table-panel-width-hack">Time</div>2020-04-24 16:53:36
+                                                <div class="table-panel-width-hack">时间</div>2020-04-24 16:53:36
                                             </td>
                                             <td style="text-align:right">
-                                                <div class="table-panel-width-hack">A-series</div>73.89
+                                                <div class="table-panel-width-hack">A-序列</div>73.89
                                             </td>
                                         </tr>
                                         <tr>
@@ -450,8 +450,8 @@
                         </div>
                         <div class="datapoints-warning ng-hide" ng-show="ctrl.table.rows.length===0">
                             <span class="small">
-                                No data to show <i class="grafana-tip fa fa-question-circle"
-                                    bs-tooltip="'Nothing returned by data query'" data-original-title="" title=""></i>
+                                没有数据显示 <i class="grafana-tip fa fa-question-circle"
+                                    bs-tooltip="'数据查询没有返回'" data-original-title="" title=""></i>
                             </span>
                         </div>
                         <div class="table-panel-footer">

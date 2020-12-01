@@ -9,38 +9,38 @@
               Id
               <info-popover mode="right-normal">
                 <span
-                  ng-bind-html="$GF.popover('Id of object, double click on it to rename', 'INSPECT','inspect_graph_table')">
+                  ng-bind-html="$GF.popover('对象的Id，双击它重命名', 'INSPECT','inspect_graph_table')">
                 </span>
               </info-popover>
             </div>
           </th>
           <th style="width: 300px;">
             <div class="table-panel-table-header-inner pointer">
-              Text</div>
+              文本</div>
           </th>
           <th>
             <div class="table-panel-table-header-inner pointer" style="text-align:center;">
-              Level
+              标准
             </div>
           </th>
           <th>
             <div class="table-panel-table-header-inner pointer" style="text-align:center;">
-              Font Col.
+              字体颜色
             </div>
           </th>
           <th>
             <div class="table-panel-table-header-inner pointer" style="text-align:center;">
-              Fill Col.
+              填充颜色
             </div>
           </th>
           <th>
             <div class="table-panel-table-header-inner pointer" style="text-align:center;">
-              Stoke Col.
+              Stoke颜色
             </div>
           </th>
           <th style="display:inline-block;">
             <div class="table-panel-table-header-inner pointer" style="text-align:center;">
-              Tags
+              标签
             </div>
           </th>
         </tr>
@@ -103,17 +103,17 @@
           <td style='text-align:center;'>
             <div class="flowchartTable-editor">
               <div>
-                <div style="display:inline-block" ng-show="state.shapeState.isChanged()" bs-tooltip="'Mapping on Color'"><i
+                <div style="display:inline-block" ng-show="state.shapeState.isChanged()" bs-tooltip="'映射在颜色'"><i
                     class="fa fa-paint-brush"></i><i class="fa fa-fw"></i></div>
-                <div style="display:inline-block" ng-show="state.textState.isChanged()" bs-tooltip="'Mapping on text'"><i
+                <div style="display:inline-block" ng-show="state.textState.isChanged()" bs-tooltip="'映射在文本'"><i
                     class="fa fa-paragraph"></i><i class="fa fa-fw"></i></div>
-                <div style="display:inline-block" ng-show="state.linkState.isChanged()" bs-tooltip="'Mapping on Link'"><i
+                <div style="display:inline-block" ng-show="state.linkState.isChanged()" bs-tooltip="'映射在链接'"><i
                     class="fa fa-chain"></i><i class="fa fa-fw"></i></div>
-                <div style="display:inline-block" ng-show="state.eventState.isChanged()" bs-tooltip="'Mapping on Animation'"><i
+                <div style="display:inline-block" ng-show="state.eventState.isChanged()" bs-tooltip="'映射在动画'"><i
                     class="fa fa-film"></i><i class="fa fa-fw"></i></div>
-                <div style="display:inline-block" ng-show="state.changed" bs-tooltip="'Mapped and Changed'"><i
+                <div style="display:inline-block" ng-show="state.changed" bs-tooltip="'映射和改变'"><i
                     class="fa fa-check-circle"></i><i class="fa fa-fw"></i></div>
-                <div style="display:inline-block" ng-show="state.getStatus('tooltip') === true" bs-tooltip="'Tooltips available'"><i
+                <div style="display:inline-block" ng-show="state.getStatus('tooltip') === true" bs-tooltip="'工具提示可用'"><i
                     class="fa fa-info"></i><i class="fa fa-fw"></i></div>
               </div>
             </div>
@@ -125,10 +125,10 @@
 </div>
 <div class="gf-form">
   <button class="btn btn-danger btn-small" ng-click="editor.reset()" style="margin-right: 5px;">
-    <i class="fa fa-power-off"></i> Reinit graph and color
+    <i class="fa fa-power-off"></i> 重置图形和颜色
   </button>
   <button ng-show="editor.flowchartHandler.getFlowchart().getStateHandler().edited"
     class="btn btn-secondary btn-small" ng-click="editor.apply()" style="margin-right: 5px;">
-    <i class="fa fa-save"></i> Apply changes
+    <i class="fa fa-save"></i> 应用更改
   </button>
 </div>

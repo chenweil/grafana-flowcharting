@@ -217,7 +217,7 @@ export class MetricTooltip {
         graph = new BarGraphTooltip();
         break;
       default:
-        $GF.log.error('Graph type unknow', type);
+        $GF.log.error('图形类型未知', type);
         graph = new BarGraphTooltip();
         break;
     }
